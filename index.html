@@ -1,37 +1,171 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Labdhi Mandovara | AI Engineer & Creative Developer</title>
-    <meta name="title" content="Labdhi Mandovara | AI Engineer & Creative Developer" />
-    <meta name="description" content="Personal portfolio of Labdhi Mandovara. Bridging the gap between intelligent systems and human intuition through AI, machine learning, and interactive web engineering." />
-    <meta name="keywords" content="Labdhi Mandovara, AI, Machine Learning, Deep Learning, computer vision, NLP, software engineer, web developer, portfolio" />
-    <meta name="author" content="Labdhi Mandovara" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://labdhi.vercel.app/" />
-    <meta property="og:title" content="Labdhi Mandovara | AI Engineer & Creative Developer" />
-    <meta property="og:description" content="Bridging the gap between intelligent systems and human intuition. Discover my projects in computer vision, multilingual voice bots, and 5G IoV networks." />
-    <meta property="og:image" content="/assets/profile.jpg" />
+    <title>Labdhi Mandovara | Portfolio</title>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Labdhi Mandovara | AI Engineer & Creative Developer" />
-    <meta property="twitter:description" content="Bridging the gap between intelligent systems and human intuition." />
-    <meta property="twitter:image" content="/assets/profile.jpg" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-brand-bg text-brand-text font-sans antialiased overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand">
+            <div class="logo">L</div>
+            <h2>Labdhi Mandovara</h2>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- HERO -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="welcome">
+                WELCOME TO MY SPACE
+            </div>
+
+            <p class="hello">
+                HELLO, I AM
+            </p>
+
+            <h1>
+                Labdhi Mandovara
+            </h1>
+
+            <h2 class="role">
+                AI/ML Developer
+                <span class="cursor"></span>
+            </h2>
+
+            <p class="description">
+                Bridging the gap between intelligent systems and human intuition.
+                Specializing in machine learning systems, human-centered speech
+                analytics, and responsive interface architectures.
+            </p>
+
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <a href="#work" class="btn explore">
+                    Explore My Work
+                    <span>→</span>
+                </a>
+
+                <a href="mailto:your@email.com" class="btn contact">
+                    <span class="mail">✉</span>
+                    Contact Me
+                </a>
+
+            </div>
+
+
+            <!-- SOCIAL ICONS -->
+            <div class="socials">
+
+                <a href="#" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 19c-4 1-4-2-5-2m10 4v-3.5c0-1 .1-1.5-.5-2
+                        2.5-.3 5-1.2 5-5.5
+                        0-1.2-.4-2.2-1-3
+                        .1-.3.4-1.5-.1-3
+                        0 0-1-.3-3.2 1.1
+                        -1-.3-2-.4-3-.4
+                        s-2 .1-3 .4
+                        C6 4.7 5 5 5 5
+                        c-.5 1.5-.2 2.7-.1 3
+                        -.6.8-1 1.8-1 3
+                        0 4.3 2.5 5.2 5 5.5
+                        -.6.5-.6 1.2-.5 2V21"/>
+                    </svg>
+                </a>
+
+
+                <a href="#" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+
+
+                <a href="mailto:your@email.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="m2 6 10 7L22 6"/>
+                    </svg>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT IMAGE -->
+        <section class="project-preview" id="work">
+
+            <img
+                src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=80"
+                alt="Project Preview">
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+
+            menuBtn.classList.toggle("active");
+            mobileMenu.classList.toggle("open");
+
+        });
+
+
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+            link.addEventListener("click", function () {
+
+                menuBtn.classList.remove("active");
+                mobileMenu.classList.remove("open");
+
+            });
+
+        });
+
+    </script>
+
+</body>
 </html>
