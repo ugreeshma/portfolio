@@ -613,3 +613,99 @@ h1 {
     }
 
 }
+/* =========================
+   ABOUT / MY STORY
+========================= */
+
+.about-section {
+    background: #faf9f6;
+    color: #222;
+    padding: 90px 8%;
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-label {
+    color: #c47b52;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+}
+
+.about-title {
+    font-size: clamp(50px, 7vw, 78px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.title-line {
+    width: 115px;
+    height: 7px;
+    background: #c47b52;
+    border-radius: 10px;
+    margin-top: 28px;
+    margin-bottom: 70px;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-content p {
+    font-size: 25px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.about-content .secondary {
+    color: #777;
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding: 75px 44px;
+    }
+
+    .section-label {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .about-title {
+        font-size: 48px;
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .title-line {
+        width: 115px;
+        height: 6px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+    }
+
+    .about-content p {
+        font-size: 24px;
+        line-height: 1.8;
+    }
+
+    .about-content .secondary {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+}
