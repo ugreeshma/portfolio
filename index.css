@@ -1046,3 +1046,40 @@ h1 {
         padding: 7px 11px;
     }
 }
+
+/* =========================
+   COMMON SECTION SPACING
+========================= */
+
+.about-section,
+.education-section,
+.technical-skills-section {
+    padding: 60px 8%;
+}
+
+
+/* Heading spacing */
+
+.about-section .title-line,
+.education-section .title-line,
+.technical-skills-section .title-line {
+    margin-bottom: 40px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-section,
+    .education-section,
+    .technical-skills-section {
+        padding: 55px 44px;
+    }
+
+    .about-section .title-line,
+    .education-section .title-line,
+    .technical-skills-section .title-line {
+        margin-bottom: 35px;
+    }
+}
