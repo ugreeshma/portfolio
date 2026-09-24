@@ -878,3 +878,171 @@ h1 {
         font-size: 14px;
     }
 }
+
+/* =========================
+   TECHNICAL SKILLS
+========================= */
+
+.technical-skills-section {
+    background: #faf9f6;
+    color: #222;
+    padding: 90px 8%;
+}
+
+.technical-skills-section .section-label {
+    color: #c47b52;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+}
+
+.technical-skills-title {
+    font-size: clamp(50px, 7vw, 78px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.technical-skills-section .title-line {
+    width: 115px;
+    height: 7px;
+    background: #c47b52;
+    border-radius: 10px;
+    margin-top: 28px;
+    margin-bottom: 70px;
+}
+
+
+/* SKILLS GRID */
+
+.technical-skills-content {
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* SKILL CARD */
+
+.technical-skill-card {
+    background: #fff;
+
+    border: 1px solid #e5dfda;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    min-height: 150px;
+
+    transition: 0.25s ease;
+}
+
+.technical-skill-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d4b19d;
+
+    box-shadow:
+        0 8px 25px rgba(100, 70, 50, 0.08);
+}
+
+
+/* CARD TITLE */
+
+.technical-skill-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+
+    color: #292929;
+}
+
+
+/* TAGS */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.skill-tags span {
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    background: #faf7f4;
+
+    border: 1px solid #eee3dc;
+
+    border-radius: 20px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.skill-tags span:hover {
+    color: #b87550;
+
+    border-color: #d7b29c;
+
+    background: #f8eee8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .technical-skills-section {
+        padding: 75px 44px;
+    }
+
+    .technical-skills-section .section-label {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .technical-skills-title {
+        font-size: 48px;
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .technical-skills-section .title-line {
+        width: 115px;
+        height: 6px;
+        margin-top: 25px;
+        margin-bottom: 60px;
+    }
+
+    .technical-skills-content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .technical-skill-card {
+        padding: 24px;
+    }
+
+    .technical-skill-card h3 {
+        font-size: 18px;
+    }
+
+    .skill-tags span {
+        font-size: 11px;
+        padding: 7px 11px;
+    }
+}
