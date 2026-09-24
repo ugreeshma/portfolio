@@ -1083,3 +1083,130 @@ h1 {
         margin-bottom: 35px;
     }
 }
+
+.experience-section {
+    background: #faf9f6;
+    color: #222;
+    padding: 60px 8%;
+}
+
+.experience-section .section-label {
+    color: #c47b52;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+}
+
+.experience-title {
+    font-size: clamp(50px, 7vw, 78px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.experience-section .title-line {
+    width: 115px;
+    height: 7px;
+    background: #c47b52;
+    border-radius: 10px;
+    margin-top: 28px;
+    margin-bottom: 40px;
+}
+
+.experience-content {
+    max-width: 950px;
+}
+
+.experience-item {
+    background: #fff;
+    border: 1px solid #e5dfda;
+    border-radius: 18px;
+    padding: 32px;
+    transition: 0.25s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-4px);
+    border-color: #d4b19d;
+    box-shadow: 0 8px 25px rgba(100, 70, 50, 0.08);
+}
+
+.experience-year {
+    color: #c47b52;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.experience-item h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #222;
+}
+
+.experience-company {
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.experience-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 22px;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.experience-tags span {
+    padding: 8px 13px;
+    background: #faf7f4;
+    border: 1px solid #eee3dc;
+    border-radius: 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 55px 44px;
+    }
+
+    .experience-title {
+        font-size: 48px;
+        line-height: 1.08;
+    }
+
+    .experience-section .title-line {
+        width: 115px;
+        height: 6px;
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+
+    .experience-item {
+        padding: 24px;
+    }
+
+    .experience-item h3 {
+        font-size: 23px;
+    }
+
+    .experience-company {
+        font-size: 17px;
+    }
+
+    .experience-description {
+        font-size: 16px;
+    }
+}
