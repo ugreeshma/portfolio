@@ -1466,3 +1466,58 @@ h1 {
         font-size: 21px;
     }
 }
+
+.resume-section {
+    background: #faf9f6;
+    color: #222;
+    padding: 60px 8%;
+}
+
+.resume-section .section-label {
+    color: #c47b52;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+}
+
+.resume-title {
+    font-size: clamp(50px, 7vw, 78px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.resume-section .title-line {
+    width: 115px;
+    height: 7px;
+    background: #c47b52;
+    border-radius: 10px;
+    margin: 28px 0 35px;
+}
+
+.resume-text {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background: #c47b52;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.resume-button:hover {
+    background: #a96343;
+    transform: translateY(-2px);
+}
