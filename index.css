@@ -710,48 +710,171 @@ h1 {
     }
 }
 
-/* ================================
+
+/* =========================
    EDUCATION
-================================ */
+========================= */
 
 .education-section {
     background: #faf9f6;
     color: #222;
-    padding: 110px 6%;
-    border-top: 1px solid #eee;
-    overflow: hidden;
+    padding: 90px 8%;
+    min-height: 100vh;
 }
 
-
-/* HEADING */
-
-.education-heading {
-    max-width: 1100px;
-    margin: 0 auto 70px;
-}
-
-.education-heading .section-number {
-    color: #b87550;
-    font-size: 12px;
+.education-section .section-label {
+    color: #c47b52;
+    font-size: 17px;
     font-weight: 600;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
 }
 
-.education-heading .section-number span {
-    margin: 0 8px;
-    color: #d0a58d;
-}
-
-.education-heading h2 {
-    font-size: 48px;
+.education-title {
+    font-size: clamp(50px, 7vw, 78px);
     font-weight: 500;
-    letter-spacing: -1.5px;
+    line-height: 1.05;
+    letter-spacing: -2px;
     margin: 0;
 }
 
-.orange-line {
-    width: 45px;
-    height: 4px;
+.education-section .title-line {
+    width: 115px;
+    height: 7px;
     background: #c47b52;
-   
+    border-radius: 10px;
+    margin-top: 28px;
+    margin-bottom: 70px;
+}
+
+
+/* EDUCATION CONTENT */
+
+.education-content {
+    max-width: 900px;
+}
+
+
+/* EACH EDUCATION */
+
+.education-item {
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #e5ded8;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+
+/* YEAR */
+
+.education-year {
+    color: #c47b52;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+
+/* DEGREE */
+
+.education-item h3 {
+    font-size: 27px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+
+/* COLLEGE */
+
+.education-item p {
+    font-size: 21px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+
+/* UNIVERSITY */
+
+.education-item span {
+    display: block;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #888;
+}
+
+
+/* CGPA */
+
+.education-item strong {
+    display: inline-block;
+    margin-top: 18px;
+
+    padding: 8px 14px;
+
+    background: #f4ebe5;
+    color: #b87550;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .education-section {
+        padding: 75px 44px;
+    }
+
+    .education-section .section-label {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .education-title {
+        font-size: 48px;
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .education-section .title-line {
+        width: 115px;
+        height: 6px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+    }
+
+    .education-item {
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+    }
+
+    .education-item h3 {
+        font-size: 23px;
+    }
+
+    .education-item p {
+        font-size: 19px;
+        line-height: 1.7;
+    }
+
+    .education-item span {
+        font-size: 17px;
+    }
+
+    .education-year {
+        font-size: 14px;
+    }
+}
