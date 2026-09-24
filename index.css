@@ -1,81 +1,615 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* =========================
+   RESET
+========================= */
 
-@layer base {
-  body {
-    @apply bg-[#FAF8F5] text-[#23211F] selection:bg-[#C87A53] selection:text-white font-sans antialiased overflow-x-hidden;
-  }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #FAF8F5;
-}
-::-webkit-scrollbar-thumb {
-  background: #E5DFD9;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #C87A53;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Custom organic image frame animation */
-.organic-frame {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: morph 12s ease-in-out infinite;
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --background: #faf9f6;
+    --text: #222222;
+    --gray: #73706e;
+    --accent: #c77d56;
+    --border: #e5e1dc;
 }
 
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 30% / 50% 60% 30% 60%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(100, 100, 100, 0.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(100, 100, 100, 0.07) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 72px;
+
+    min-height: 100vh;
 }
 
-/* Glassmorphism custom classes */
-.glass-header {
-  background: rgba(250, 248, 245, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(229, 223, 217, 0.6);
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+
+    padding: 48px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.glass-card {
-  background: rgba(244, 239, 234, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(229, 223, 217, 0.5);
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
 }
 
-.hairline-border {
-  border: 1px solid rgba(229, 223, 217, 0.8);
+
+.logo {
+    width: 58px;
+    height: 58px;
+
+    background: var(--accent);
+
+    color: white;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    font-weight: 500;
 }
 
-/* Interactive Grid Background */
-.bg-grid-pattern {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(229, 223, 217, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(229, 223, 217, 0.3) 1px, transparent 1px);
+
+.brand h2 {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
 }
 
-/* Smooth reveal animation classes */
-.reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+/* =========================
+   MENU BUTTON
+========================= */
+
+.menu-btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    position: relative;
+
+    z-index: 20;
 }
 
-.reveal-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+
+.menu-btn span {
+    width: 34px;
+    height: 3px;
+
+    background: #292929;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+/* Hamburger → X */
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 75%;
+    height: 100vh;
+
+    background: var(--background);
+
+    padding: 130px 40px;
+
+    z-index: 10;
+
+    transition: 0.4s;
+
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.mobile-menu.open {
+    right: 0;
+}
+
+
+.mobile-menu a {
+    display: block;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 25px;
+
+    margin-bottom: 32px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1000px;
+
+    margin: 65px auto 0;
+
+    padding: 0 6%;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    display: inline-block;
+
+    padding: 9px 21px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 30px;
+
+    color: var(--accent);
+
+    background: rgba(255, 255, 255, 0.35);
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* HELLO */
+
+.hello {
+    margin-top: 47px;
+
+    color: #6e6a68;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+/* NAME */
+
+h1 {
+    margin-top: 20px;
+
+    font-size: clamp(50px, 7vw, 76px);
+
+    line-height: 1.05;
+
+    letter-spacing: -4px;
+
+    font-weight: 500;
+}
+
+
+/* ROLE */
+
+.role {
+    margin-top: 35px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--accent);
+
+    font-size: clamp(30px, 4vw, 38px);
+
+    font-weight: 700;
+}
+
+
+/* TYPING CURSOR */
+
+.cursor {
+    width: 3px;
+    height: 38px;
+
+    background: var(--accent);
+
+    margin-left: 7px;
+
+    animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    max-width: 760px;
+
+    margin-top: 48px;
+
+    color: var(--gray);
+
+    font-size: 25px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    gap: 28px;
+
+    margin-top: 58px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+    text-decoration: none;
+
+    padding: 22px 40px;
+
+    border-radius: 18px;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    transition: 0.25s ease;
+}
+
+
+/* EXPLORE */
+
+.explore {
+    min-width: 360px;
+
+    background: #222;
+
+    color: white;
+}
+
+
+.explore:hover {
+    background: #000;
+
+    transform: translateY(-3px);
+}
+
+
+.explore span {
+    font-size: 29px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    min-width: 295px;
+
+    color: #292929;
+
+    background: #f8f3ef;
+
+    border: 1px solid var(--border);
+}
+
+
+.contact:hover {
+    transform: translateY(-3px);
+}
+
+
+.mail {
+    font-size: 25px;
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials {
+    display: flex;
+
+    gap: 28px;
+
+    margin-top: 65px;
+}
+
+
+.socials a {
+    color: #77736f;
+
+    transition: 0.2s;
+}
+
+
+.socials a:hover {
+    color: var(--accent);
+
+    transform: translateY(-3px);
+}
+
+
+.socials svg {
+    width: 35px;
+    height: 35px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================
+   PROJECT PREVIEW
+========================= */
+
+.project-preview {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 70px auto 100px;
+
+    overflow: hidden;
+
+    border-radius: 28px 28px 0 0;
+
+    border: 1px solid var(--border);
+
+    background: white;
+}
+
+
+.project-preview img {
+    width: 100%;
+
+    display: block;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 35px 6%;
+    }
+
+
+    .brand {
+        gap: 14px;
+    }
+
+
+    .logo {
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .brand h2 {
+        font-size: 25px;
+    }
+
+
+    .hero {
+        margin-top: 45px;
+    }
+
+
+    .welcome {
+        font-size: 16px;
+
+        padding: 9px 20px;
+    }
+
+
+    .hello {
+        margin-top: 43px;
+
+        font-size: 22px;
+    }
+
+
+    h1 {
+        font-size: 51px;
+
+        letter-spacing: -3px;
+
+        line-height: 1.1;
+    }
+
+
+    .role {
+        font-size: 32px;
+
+        margin-top: 28px;
+    }
+
+
+    .cursor {
+        height: 32px;
+    }
+
+
+    .description {
+        margin-top: 40px;
+
+        font-size: 22px;
+
+        line-height: 1.7;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+
+        gap: 20px;
+
+        margin-top: 50px;
+    }
+
+
+    .btn {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 20px 25px;
+    }
+
+
+    .socials {
+        margin-top: 60px;
+    }
+
+
+    .project-preview {
+        width: 88%;
+
+        margin-top: 65px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .brand h2 {
+        font-size: 21px;
+    }
+
+
+    .logo {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    h1 {
+        font-size: 44px;
+    }
+
+
+    .role {
+        font-size: 28px;
+    }
+
+
+    .description {
+        font-size: 20px;
+    }
+
 }
